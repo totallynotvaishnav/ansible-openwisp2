@@ -72,11 +72,11 @@ server {
     }
     {% endif %}
 
-    location /static {
+    location /static/ {
         alias {{ openwisp2_path }}/static/;
     }
 
-    location /media {
+    location /media/ {
         alias {{ openwisp2_path }}/media/;
     }
 }
@@ -113,11 +113,11 @@ server {
         return 301 https://$host$request_uri;
     }
 
-    location /static {
+    location /static/ {
         alias {{ openwisp2_path }}/static/;
     }
 
-    location /media {
+    location /media/ {
         alias {{ openwisp2_path }}/media/;
     }
     {% else %}
